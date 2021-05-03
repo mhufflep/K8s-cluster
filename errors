@@ -1,0 +1,13 @@
+docker.io/metallb/controller:v0.8.2
+    ▪ Using image metallb/controller:v0.8.2
+    ▪ Using image metallb/speaker:v0.8.2
+
+❌  Exiting due to MK_ENABLE: run callbacks: running callbacks: [sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.20.2/kubectl apply -f /etc/kubernetes/addons/metallb.yaml -f /etc/kubernetes/addons/metallb-config.yaml: Process exited with status 1
+stdout:
+
+stderr:
+sudo: /var/lib/minikube/binaries/v1.20.2/kubectl: command not found
+]
+
+
+Localhost doesn't work: Metallb cannot give requested ip, need to try another one.

@@ -1,0 +1,17 @@
+brew install minikube
+mv ~/.minikube ~/goinfre/.minikube 
+ln -s ~/goinfre/.minikube ~/.minikube
+
+
+minikube start --vm-driver=virtualbox --cpus 1 --memory=2000mb
+Если вы уже установили Minikube, то minikube start вернёт ошибку: machine does not exist
+Чтобы исправить это, нужно очистить локальное состояние: minikube delete
+
+
+# kubectl delete -f json_conf/nginx_service.json
+# kubectl delete -f json_conf/nginx_deploy.json
+
+
+#kubectl apply -f json_conf/metallb.json
+#kubectl apply -f json_conf/nginx_service.json
+#kubectl apply -f json_conf/nginx_deploy.json
