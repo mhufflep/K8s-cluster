@@ -14,7 +14,7 @@
  * This is needed for cookie based authentication to encrypt password in
  * cookie. Needs to be 32 chars long.
  */
-$cfg['blowfish_secret'] = '.JtQI2HoMOX;T%03A!SGKQfRr:74a'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+$cfg['blowfish_secret'] = 'c7]G,Ug:;rEjRbwvt7,OI77BFmxIikOP'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /**
  * Servers configuration
@@ -28,7 +28,9 @@ $i++;
 /* Authentication type */
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = 'localhost';
+$cfg['Servers'][$i]['user'] = 'mhufflep';
+$cfg['Servers'][$i]['password'] = 'mhufflep';
+$cfg['Servers'][$i]['host'] = 'mysql-service:3306';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 
@@ -67,7 +69,7 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
 /**
  * End of servers configuration
  */
-
+$cfg['TempDir'] = '/tmp/';
 /**
  * Directories for saving/loading files from server
  */

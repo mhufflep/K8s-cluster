@@ -20,7 +20,7 @@ spec:
         imagePullPolicy: Never
         ports:
           - containerPort: 80
-          - containerPort: 443  
+          - containerPort: 443
 
 ---
 
@@ -44,4 +44,4 @@ spec:
     port: 22
     protocol: TCP
   type: LoadBalancer
-  loadBalancerIP: 192.168.99.188
+  loadBalancerIP: 192.168.99.150

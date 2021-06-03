@@ -1,4 +1,4 @@
-CREATE DATABASE mhufflep_db;
-CREATE USER 'mhufflep'@'localhost' IDENTIFIED BY 'mhufflep';
-GRANT ALL PRIVILEGES ON mhufflep_db.* TO 'mhufflep'@'localhost';
+CREATE DATABASE wordpress;
+CREATE USER 'mhufflep'@'%' IDENTIFIED BY 'mhufflep';
+GRANT ALL PRIVILEGES ON *.* TO 'mhufflep'@'%';
 FLUSH PRIVILEGES;

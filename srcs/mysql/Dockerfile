@@ -7,9 +7,11 @@ RUN apk update && apk upgrade
 #-- utilities
 RUN apk add vim 
 RUN apk add openrc --no-cache
-RUN apk add mysql-client --no-cache
+RUN apk add mysql mysql-client --no-cache
 
 VOLUME ["/var/lib/mysql"]
+#check
+VOLUME [ "/sys/fs/cgroup" ] 
 
 RUN mkdir -p /run/mysqld/
 
