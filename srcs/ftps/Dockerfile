@@ -1,0 +1,19 @@
+FROM alpine:3.7
+LABEL maintainer="mhufflep@student.21-school.ru"
+
+RUN apk update && apk upgrade
+
+RUN apk add bash vsftpd openssl
+
+EXPOSE 21 10100
+
+COPY ./srcs/vsftpd.conf /etc/vsftpd/vsftpd.conf
+RUN mkdir -p /var/log/ftp
+
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+		-subj "/C=ru/ST=Kazan/L=Kazan/O=no/OU=no/CN=mhuf" \
+		-keyout /etc/vsftpd/vsftpd.pem -out /etc/vsftpd/vsftpd.pem
+
+RUN echo "root:root" | chpasswd
+
+CMD ["vsftpd", "/etc/vsftpd/vsftpd.conf"]
