@@ -19,6 +19,7 @@ docker build -t phpmyadmin_img ./srcs/phpmyadmin
 docker build -t wordpress_img ./srcs/wordpress
 docker build -t ftps_img ./srcs/ftps
 docker build -t influxdb_img ./srcs/influxdb
+docker build -t grafana_img ./srcs/grafana
 
 #applying minikube yaml configurations
 kubectl apply -f ./srcs/nginx/nginx.yaml
@@ -27,8 +28,7 @@ kubectl apply -f ./srcs/phpmyadmin/phpmyadmin.yaml
 kubectl apply -f ./srcs/wordpress/wordpress.yaml
 kubectl apply -f ./srcs/ftps/ftps.yaml
 kubectl apply -f ./srcs/influxdb/influxdb.yaml
-# kubectl apply -f ./srcs/telegraf/telegraf.yaml
-# kubectl apply -f ./srcs/grafana/grafana.yaml
+kubectl apply -f ./srcs/grafana/grafana.yaml
 
 #applying minikube json configurations
 # kubectl apply -f ./srcs/nginx/nginx.json
