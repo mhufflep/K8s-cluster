@@ -42,5 +42,7 @@ spec:
     targetPort: 21
   - port: 10100
     name: passive-port
+    protocol: TCP
     targetPort: 10100 
   type: LoadBalancer
+  loadBalancerIP: 192.168.99.150

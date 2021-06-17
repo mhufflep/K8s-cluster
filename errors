@@ -11,3 +11,5 @@ sudo: /var/lib/minikube/binaries/v1.20.2/kubectl: command not found
 
 
 Localhost doesn't work: Metallb cannot give requested ip, need to try another one.
+
+influxdb-deployment-7944f8bb66-9pfgh

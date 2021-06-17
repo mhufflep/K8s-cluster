@@ -15,10 +15,15 @@ RUN apk add glibc-2.33-r0.apk
 
 VOLUME [ "/root/.influxdb" ]
 
+COPY ./influxdb.conf /etc/influxdb/
+
+# RUN service influxdb restart
+
 # -- telegraf
 ADD https://dl.influxdata.com/telegraf/releases/telegraf-1.18.1_linux_amd64.tar.gz /
 COPY srcs/telegraf.sh ./
-RUN sh telegraf.sh
+RUN chmod +x telegraf.sh
+RUN ./telegraf.sh
 
 # -- supervisor
 RUN mkdir -p /var/log/supervisor

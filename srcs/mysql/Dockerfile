@@ -11,7 +11,7 @@ RUN apk add mysql mysql-client --no-cache
 
 VOLUME ["/var/lib/mysql"]
 #check
-VOLUME [ "/sys/fs/cgroup" ] 
+VOLUME [ "/sys/fs/cgroup" ]
 
 RUN mkdir -p /run/mysqld/
 
