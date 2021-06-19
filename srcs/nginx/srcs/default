@@ -38,3 +38,7 @@ server {
         try_files $uri $uri/ =404;
     }
 }
+
+# rewrite ^([^.\?]*[^/])$ $1/ permanent;    to avoid querystrings of a rest url getting a / tagged on. e.g. /myrest/do?d=12345
+# rewrite ^([^.]*[^/])$ $1/ permanent;      add a slash to every url
+# rewrite ^([^.]*)$ /index.php;             This very simply rewrites all URI's that don't have periods in them to your index.php (or whatever file you would execute your controller from).

@@ -1,4 +1,4 @@
-docker.io/metallb/controller:v0.8.2
+1. docker.io/metallb/controller:v0.8.2
     ▪ Using image metallb/controller:v0.8.2
     ▪ Using image metallb/speaker:v0.8.2
 
@@ -9,7 +9,17 @@ stderr:
 sudo: /var/lib/minikube/binaries/v1.20.2/kubectl: command not found
 ]
 
+Solution:
+    docker pull metallb/speaker:v0.8.2
+    docker pull metallb/controller:v0.8.2
 
-Localhost doesn't work: Metallb cannot give requested ip, need to try another one.
+2. Localhost doesn't work.
 
-influxdb-deployment-7944f8bb66-9pfgh
+Solution:
+    Metallb cannot give requested ip, need to try another one.
+
+3. Grafana doesn't save previous metrics when pod fails.
+Solution:
+    Make sure that db you specified in Dockerfile and yaml config of influxdb uses the standard path to db (/var/lib/influxdb)
+    Otherwise you should specify a new path to your db in etc/influxdb/influxdb.conf (you should search dir="<path>")
+    and restart service to apply changes.

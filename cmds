@@ -16,4 +16,4 @@ minikube start --vm-driver=virtualbox --cpus 1 --memory=2000mb
 #kubectl apply -f json_conf/nginx_service.json
 #kubectl apply -f json_conf/nginx_deploy.json
 
-# docker image rm $(docker images | grep grafana_img | tr -s ' ' | cut -d" " -f3)       
+# docker image rm $(docker images | grep grafana_img | tr -s ' ' | cut -d" " -f3)

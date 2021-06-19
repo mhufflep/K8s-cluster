@@ -1,2 +1,0 @@
-[x] 1. Add default html page (create, add to dockerfile and nginx conf) 
-[x] 2. Change metallb json "config"
