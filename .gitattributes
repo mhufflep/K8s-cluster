@@ -1,3 +1,4 @@
-*.php linguist-detectable=false
 *.yml linguist-detectable=true
 *.yml linguist-language=YAML
+
+*.php linguist-detectable=false
