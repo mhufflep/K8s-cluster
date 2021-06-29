@@ -25,4 +25,4 @@ COPY ./srcs/start.sh /
 
 CMD bash start.sh
 
-
+# kubectl cp grafana-deployment-58b59d7fb7-424pt:grafana-7.5.4/data/grafana.db grafana.db
