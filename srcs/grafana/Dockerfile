@@ -20,7 +20,7 @@ RUN tar -xzf grafana-7.5.4.linux-amd64.tar.gz && \
 
 RUN mkdir /grafana-7.5.4/data/
 
-# COPY ./srcs/grafana.db /grafana-7.5.4/data/grafana.db
+COPY ./srcs/grafana.db /grafana-7.5.4/data/grafana.db
 COPY ./srcs/start.sh /
 
 CMD bash start.sh

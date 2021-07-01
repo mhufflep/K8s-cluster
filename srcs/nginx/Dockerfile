@@ -20,11 +20,14 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 RUN rm -rf /etc/nginx/conf.d/default.conf
 COPY ./srcs/default /etc/nginx/conf.d/default.conf
 
+COPY ./srcs/images /var/www/html/images
+
 RUN mkdir -p /var/log/supervisor
 COPY ./srcs/supervisord.conf /etc/supervisord.conf
 
 COPY ./srcs/index.html /var/www/html/
+COPY ./srcs/style.css /var/www/html/
 
 EXPOSE 80 443
-	
+
 CMD ["/usr/bin/supervisord"]
