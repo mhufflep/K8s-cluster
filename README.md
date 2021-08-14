@@ -12,7 +12,8 @@ Contains the following services:
 
 # Dependencies
 ## Linux preparation: <br>
-    Go and get [Homebrew for Linux](https://docs.brew.sh/Homebrew-on-Linux)
+ 1. Install
+   [Homebrew for Linux](https://docs.brew.sh/Homebrew-on-Linux)
 ## MacOS | Linux install
 ### Kubernetes CLI
     1. Install kubectl by this command: `brew install kubernetes-cli`
