@@ -1,4 +1,4 @@
-*.yaml linguist-detectable=true
+*.yaml linguist-detectable=false
 *.yaml linguist-language=YAML
 
 Dockerfile linguist-detectable=true
